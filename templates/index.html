@@ -27,15 +27,15 @@
                     {% if data.error %}
                         <p class="error">{{ data.error }}</p>
                     {% else %}
-                        <p><strong>Temperature:</strong> {{ data.current.temp }} K</p>
+                        <p><strong>Temperature:</strong> {{ (data.current.temp - 273.15) | round(2) }} °C</p>
                         <p><strong>Weather:</strong> {{ data.current.weather[0].description }}</p>
                         <p><strong>Humidity:</strong> {{ data.current.humidity }}%</p>
                         <p><strong>Wind Speed:</strong> {{ data.current.wind_speed }} m/s</p>
                         <h3>Hourly Forecast:</h3>
                         <ul>
-                            <li><strong>Next Hour:</strong> {{ data.hourly[1].temp | default(0) }} K</li>
-                            <li><strong>Next 2 Hours:</strong> {{ data.hourly[2].temp | default(0) }} K</li>
-                            <li><strong>Next 3 Hours:</strong> {{ data.hourly[3].temp | default(0) }} K</li>
+                            <li><strong>Next Hour:</strong> {{ (data.hourly[1].temp - 273.15) | round(2) }} °C</li>
+                            <li><strong>Next 2 Hours:</strong> {{ (data.hourly[2].temp - 273.15) | round(2) }} °C</li>
+                            <li><strong>Next 3 Hours:</strong> {{ (data.hourly[3].temp - 273.15) | round(2) }} °C</li>
                         </ul>
                     {% endif %}
                 </div>
