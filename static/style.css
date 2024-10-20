@@ -16,9 +16,9 @@ body {
 .container {
     width: 400px;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7); /* Slightly darker for contrast */
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     animation: fadeIn 1s ease-in-out;
 }
 
@@ -32,9 +32,34 @@ select {
     font-size: 16px;
 }
 
-/* Weather Data */
-.weather-container {
+/* Button */
+.btn {
+    background-color: #0072ff; /* Button color */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #005bb5; /* Darker shade on hover */
+}
+
+/* City Weather */
+.city-weather {
     margin-top: 20px;
+}
+
+/* City Card */
+.city-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px 0;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     animation: slideUp 1s ease-in-out;
 }
 
@@ -57,4 +82,10 @@ select {
         transform: translateY(0);
         opacity: 1;
     }
+}
+
+/* Error Message */
+.error {
+    color: red;
+    font-weight: bold;
 }
